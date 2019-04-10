@@ -40,3 +40,6 @@ after:
     test_color_1=#246B30
     text_bg_1=#E9CC65
 
+## Usage
+
+    Transformer.kt
