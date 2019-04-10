@@ -1,10 +1,24 @@
 import org.jsoup.Jsoup
 import java.io.File
 
+const val EXTENSION_XML = ".xml"
+
 val inputFolder = "./input"
 val outputFolder = "./output"
 
 fun main(args: Array<String>) {
+    //如果参数带文件，就直接 转换对应文件
+    val argXml = args.firstOrNull { it.endsWith(EXTENSION_XML) }
+    if (argXml != null) {
+        val argXmlFile = File(argXml)
+        if (argXmlFile.exists()) {
+            transformFile(argXmlFile)
+            return
+        }
+    }
+
+    //否则就转换 input 目录下的xml文件
+
     val inputFileFolder = File(inputFolder)
 
     if (!inputFileFolder.exists()) {
@@ -18,7 +32,7 @@ fun main(args: Array<String>) {
     }
 
     val xmlFiles = inputFileFolder.listFiles { dir, name ->
-        name.endsWith(".xml")
+        name.endsWith(EXTENSION_XML)
     }
     xmlFiles.forEach { transformFile(it) }
 }
@@ -39,7 +53,7 @@ fun transformFile(xmlFile: File) {
     propertiesFile.createNewFile()
 
     val writer = propertiesFile.writer()
-    for (element in resourceElement.allElements) {
+    for (element in resourceElement.children()) {
         writer
                 .append(element.attr("name"))
                 .append("=")

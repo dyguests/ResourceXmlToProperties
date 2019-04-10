@@ -12,22 +12,4 @@
 
     <color name="test_color_1">#246B30</color>
     <color name="text_bg_1">#E9CC65</color>
-
-    <!-- ========================================= UI稿 出的配色 ========================================= -->
-    <!--主视觉色-->
-    <color name="primary_c1">#C717BE</color>
-    <color name="primary_c2">#EB43E3</color>
-    <!--字体颜色-->
-    <color name="font_g1">#0F2512</color>
-    <color name="font_g2">#285A09</color>
-    <color name="font_g3">#1C523F</color>
-    <color name="font_g4">#0E2450</color>
-    <color name="font_g5">#38475A</color>
-    <color name="font_g6">#092066</color>
-    <!--背景-->
-    <color name="bg_g7">#383D4D</color>
-    <color name="bg_g8">#10351E</color>
-
-    <color name="primary_c2_pct_70">#B316A054</color>
-    <color name="bg_g8_pct_70">#B3466658</color>
 </resources>
