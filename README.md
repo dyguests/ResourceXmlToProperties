@@ -2,7 +2,7 @@
 
 This is a java file to transform `xxx.xml` to `xxx.properties`.
 
-此工具用于将`xml`文件转换成`properties`文件。
+此工具用于将`xml`资源文件转换成`properties`文件。
 
 
 before:
