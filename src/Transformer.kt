@@ -7,6 +7,7 @@ val inputFolder = "./input"
 val outputFolder = "./output"
 
 fun main(args: Array<String>) {
+    println("ResourceXmlToProperties start")
     //如果参数带文件，就直接 转换对应文件
     val argXml = args.firstOrNull { it.endsWith(EXTENSION_XML) }
     if (argXml != null) {
@@ -35,6 +36,7 @@ fun main(args: Array<String>) {
         name.endsWith(EXTENSION_XML)
     }
     xmlFiles.forEach { transformFile(it) }
+    println("ResourceXmlToProperties end")
 }
 
 fun transformFile(xmlFile: File) {
