@@ -31,7 +31,7 @@ fun main(args: Array<String>) {
         outputFileFolder.mkdirs()
     }
 
-    val xmlFiles = inputFileFolder.listFiles { dir, name ->
+    val xmlFiles = inputFileFolder.listFiles { _, name ->
         name.endsWith(EXTENSION_XML)
     }
     xmlFiles.forEach { transformFile(it) }
